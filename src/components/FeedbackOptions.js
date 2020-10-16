@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const OptionButton = styled.button`
 	font-size: 1em;
@@ -27,3 +28,9 @@ export default class FeedbackOptions extends Component {
 		);
 	}
 }
+
+FeedbackOptions.propTypes = {
+	onGoodIncrement: PropTypes.func.isRequired,
+	onNeutralIncrement: PropTypes.func.isRequired,
+	onBadIncrement: PropTypes.func.isRequired,
+};

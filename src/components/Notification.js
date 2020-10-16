@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 export default class Notification extends Component {
 	render() {
@@ -9,3 +10,7 @@ export default class Notification extends Component {
 		);
 	}
 }
+
+Notification.propTypes = {
+	message: PropTypes.string.isRequired,
+};
