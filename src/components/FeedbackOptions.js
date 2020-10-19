@@ -12,16 +12,16 @@ const OptionButton = styled.button`
 
 export default class FeedbackOptions extends Component {
 	render() {
-		const { onGoodIncrement, onNeutralIncrement, onBadIncrement } = this.props;
+		const { onButtonClick } = this.props;
 		return (
 			<div>
-				<OptionButton type="button" onClick={onGoodIncrement}>
+				<OptionButton type="button" onClick={onButtonClick} name="good">
 					Good
 				</OptionButton>
-				<OptionButton type="button" onClick={onNeutralIncrement}>
+				<OptionButton type="button" onClick={onButtonClick} name="neutral">
 					Neutral
 				</OptionButton>
-				<OptionButton type="button" onClick={onBadIncrement}>
+				<OptionButton type="button" onClick={onButtonClick} name="bad">
 					Bad
 				</OptionButton>
 			</div>
@@ -30,7 +30,5 @@ export default class FeedbackOptions extends Component {
 }
 
 FeedbackOptions.propTypes = {
-	onGoodIncrement: PropTypes.func.isRequired,
-	onNeutralIncrement: PropTypes.func.isRequired,
-	onBadIncrement: PropTypes.func.isRequired,
+	onButtonClick: PropTypes.func.isRequired,
 };
